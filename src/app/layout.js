@@ -1,16 +1,16 @@
 // src/app/layout.js
 "use client";
+import { CustomThemeProvider } from "@/styles/ThemeContext";
 import GlobalStyle from "@/styles/globalStyles";
-import ThemeProvider from "@/styles/theme";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body cz-shortcut-listen="true">
-        <ThemeProvider>
+        <CustomThemeProvider>
           <GlobalStyle />
           {children}
-        </ThemeProvider>
+        </CustomThemeProvider>
       </body>
     </html>
   );
