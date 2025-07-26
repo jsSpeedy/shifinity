@@ -1,16 +1,14 @@
 // src/app/layout.js
-"use client";
-import { CustomThemeProvider } from "@/styles/ThemeContext";
-import GlobalStyle from "@/styles/globalStyles";
+import { getNavData } from "@/lib/getNavData";
+import AppShell from "./AppShell";
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const navData = await getNavData();
+
   return (
     <html lang="en">
-      <body cz-shortcut-listen="true">
-        <CustomThemeProvider>
-          <GlobalStyle />
-          {children}
-        </CustomThemeProvider>
+      <body>
+        <AppShell navData={navData}>{children}</AppShell>
       </body>
     </html>
   );
