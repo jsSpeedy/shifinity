@@ -1,0 +1,78 @@
+[
+  {
+    "label": "Filmler",
+    "href": "/movies",
+    "hasDropdown": true,
+    "dropdown": {
+      "left": [
+        { "label": "Popüler", "href": "/movies/popular" },
+        { "label": "Gösterimde", "href": "/movies/now-playing" },
+        { "label": "En Çok Oy Alan", "href": "/movies/top-rated" }
+      ],
+      "right": [
+        {
+          "label": "Superman",
+          "image": "/images/superman.png",
+          "tag": "NEW",
+          "href": "/movies/latest"
+        },
+         {
+          "label": "Superman",
+          "image": "/images/superman.png",
+          "tag": "NEW",
+          "href": "/movies/latest"
+        },
+         {
+          "label": "Superman",
+          "image": "/images/superman.png",
+          "tag": "NEW",
+          "href": "/movies/latest"
+        },
+        {
+          "label": "Superman",
+          "image": "/images/superman.png",
+          "tag": "NEW",
+          "href": "/movies/latest"
+        }
+      ]
+    }
+  },
+   {
+    "label": "Diziler",
+    "href": "/dizi",
+    "hasDropdown": true,
+    "dropdown": {
+      "left": [
+        { "label": "Popüler", "href": "/dizi/popular" },
+        { "label": "Gösterimde", "href": "/dizi/now-playing" },
+        { "label": "En Çok Oy Alan", "href": "/dizi/top-rated" }
+      ],
+      "right": [
+        {
+          "label": "Superman",
+          "image": "/images/superman.png",
+          "tag": "NEW",
+          "href": "/movies/latest"
+        },
+         {
+          "label": "Superman",
+          "image": "/images/superman.png",
+          "tag": "NEW",
+          "href": "/movies/latest"
+        },
+        {
+          "label": "Superman",
+          "image": "/images/superman.png",
+          "tag": "NEW",
+          "href": "/movies/latest"
+        },
+        {
+          "label": "Superman",
+          "image": "/images/superman.png",
+          "tag": "NEW",
+          "href": "/movies/latest"
+        }
+      ]
+    }
+  }
+]
