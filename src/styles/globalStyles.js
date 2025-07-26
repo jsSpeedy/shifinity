@@ -11,8 +11,9 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     height: 100%;
     font-family: "Sora",sans-serif;
-    background-color: ${({ theme }) => theme.background};
+    background-color: ${({ theme }) => theme.secondary};
     color: ${({ theme }) => theme.text};
+    background-image: url("/images/superman.png");
   }
 
   a {

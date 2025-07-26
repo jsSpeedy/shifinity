@@ -1,9 +1,6 @@
-import ThemeToggle from "@/components/Header/ThemeToggle";
+// src/app/page.js
+"use client";
 
 export default function Home() {
-  return (
-    <div>
-      <ThemeToggle />
-    </div>
-  );
+  return <div></div>;
 }

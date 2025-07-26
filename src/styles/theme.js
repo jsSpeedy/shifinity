@@ -11,6 +11,7 @@ export const lightTheme = {
 
   primary: "#7FDBFF", // Neon blue pastel (Light)
   secondary: "#D8B4FF", // Neon purple pastel (Light)
+  white: "#FFFFFF",
 
   border: "#E0E0E0",
   hover: "#63B3ED",
@@ -27,6 +28,7 @@ export const darkTheme = {
 
   primary: "#00BFFF", // Neon blue (Dark)
   secondary: "#A020F0", // Neon purple (Dark)
+  white: "#FFFFFF",
 
   border: "#3D3D5C",
   hover: "#3A7BD5",
