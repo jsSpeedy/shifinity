@@ -2,14 +2,13 @@
 "use client";
 import { CustomThemeProvider } from "@/styles/ThemeContext";
 import GlobalStyle from "@/styles/globalStyles";
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 
 const AppShell = ({ children, navData }) => {
   return (
     <CustomThemeProvider>
       <GlobalStyle />
-      <Header navData={navData} />
-      {children}
+      <Layout navData={navData}>{children}</Layout>
     </CustomThemeProvider>
   );
 };
