@@ -5,11 +5,12 @@ import styled from "styled-components";
 import ThemeToggle from "./ThemeToggle";
 import Logo from "./Logo";
 import Menu from "./Menu";
+import Container from "../Container";
 
 const NavBar = styled.header`
   position: relative;
   z-index: 1000;
-  top: 20px;
+  margin-top: 20px;
 `;
 
 const NavbarBg = styled.div`
@@ -31,16 +32,18 @@ const NavFlex = styled.div`
 
 const Header = ({ navData }) => {
   return (
-    <NavBar>
-      <NavbarBg />
-      <NavFlex>
-        <Menu navData={navData} />
-        <Link href="/" passHref>
-          <Logo />
-        </Link>
-        <ThemeToggle />
-      </NavFlex>
-    </NavBar>
+    <Container>
+      <NavBar>
+        <NavbarBg />
+        <NavFlex>
+          <Menu navData={navData} />
+          <Link href="/" passHref>
+            <Logo />
+          </Link>
+          <ThemeToggle />
+        </NavFlex>
+      </NavBar>
+    </Container>
   );
 };
 
