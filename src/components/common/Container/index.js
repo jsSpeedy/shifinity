@@ -1,6 +1,6 @@
-// src/components/Container/index.js
+// src/components/common/Container/index.js
 import styled, { css } from "styled-components";
-import { breakpoints } from "@/styles/responsive";
+import { breakpoints, media } from "@/styles/responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -48,8 +48,8 @@ const Container = styled.div`
         max-width: 1440px;
       }
 
-      @media (min-width: ${breakpoints.quadHD}) {
-        max-width: 1600px;
+      ${media.minQuadHD} {
+        max-width: 2000px;
       }
     `}
 `;
