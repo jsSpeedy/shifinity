@@ -1,77 +1,25 @@
 [
   {
-    "label": "Filmler",
+    "title": "Filmler",
     "href": "/movies",
     "hasDropdown": true,
     "dropdown": {
-      "left": [
-        { "label": "Popüler", "href": "/movies/popular" },
-        { "label": "Gösterimde", "href": "/movies/now-playing" },
-        { "label": "En Çok Oy Alan", "href": "/movies/top-rated" }
-      ],
-      "right": [
-        {
-          "label": "Superman",
-          "image": "/images/superman.png",
-          "tag": "NEW",
-          "href": "/movies/latest"
-        },
-         {
-          "label": "Superman",
-          "image": "/images/superman.png",
-          "tag": "NEW",
-          "href": "/movies/latest"
-        },
-         {
-          "label": "Superman",
-          "image": "/images/superman.png",
-          "tag": "NEW",
-          "href": "/movies/latest"
-        },
-        {
-          "label": "Superman",
-          "image": "/images/superman.png",
-          "tag": "NEW",
-          "href": "/movies/latest"
-        }
+      "menu": [
+        { "title": "Popüler", "href": "/movies/popular", "apiKey": "popular" },
+        { "title": "Gösterimde", "href": "/movies/now-playing", "apiKey": "now_playing" },
+        { "title": "En Çok Oy Alan", "href": "/movies/top-rated", "apiKey": "top_rated" }
       ]
     }
   },
    {
-    "label": "Diziler",
+    "title": "Diziler",
     "href": "/dizi",
     "hasDropdown": true,
     "dropdown": {
-      "left": [
-        { "label": "Popüler", "href": "/dizi/popular" },
-        { "label": "Gösterimde", "href": "/dizi/now-playing" },
-        { "label": "En Çok Oy Alan", "href": "/dizi/top-rated" }
-      ],
-      "right": [
-        {
-          "label": "Superman",
-          "image": "/images/superman.png",
-          "tag": "NEW",
-          "href": "/movies/latest"
-        },
-         {
-          "label": "Superman",
-          "image": "/images/superman.png",
-          "tag": "NEW",
-          "href": "/movies/latest"
-        },
-        {
-          "label": "Superman",
-          "image": "/images/superman.png",
-          "tag": "NEW",
-          "href": "/movies/latest"
-        },
-        {
-          "label": "Superman",
-          "image": "/images/superman.png",
-          "tag": "NEW",
-          "href": "/movies/latest"
-        }
+      "menu": [
+        { "title": "Popüler", "href": "/dizi/popular", "apiKey": "popular_tv" },
+        { "title": "Gösterimde", "href": "/dizi/now-playing", "apiKey": "airing_today" },
+        { "title": "En Çok Oy Alan", "href": "/dizi/top-rated", "apiKey": "top_rated_tv" }
       ]
     }
   }
