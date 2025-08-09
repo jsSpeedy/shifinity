@@ -1,10 +1,11 @@
 // src/app/AppShell.js
 "use client";
-import { CustomThemeProvider } from "@/styles/ThemeContext";
-import GlobalStyle from "@/styles/globalStyles";
-import Layout from "@/components/Layout";
 
-const AppShell = ({ children, navData }) => {
+import GlobalStyle from "@/styles/globalStyles";
+import Layout from "@/components/common/Layout";
+import { CustomThemeProvider } from "@/context/ThemeContext";
+
+const AppLayout = ({ children, navData }) => {
   return (
     <CustomThemeProvider>
       <GlobalStyle />
@@ -13,4 +14,4 @@ const AppShell = ({ children, navData }) => {
   );
 };
 
-export default AppShell;
+export default AppLayout;

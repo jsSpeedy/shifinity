@@ -1,14 +1,14 @@
 // src/app/layout.js
 import { getNavData } from "@/lib/getNavData";
-import AppShell from "./AppShell";
+import AppLayout from "./AppLayout";
 
 export default async function RootLayout({ children }) {
   const navData = await getNavData();
 
   return (
-    <html lang="en">
+    <html lang="tr" className="tc-new-price">
       <body>
-        <AppShell navData={navData}>{children}</AppShell>
+        <AppLayout navData={navData}>{children}</AppLayout>
       </body>
     </html>
   );
