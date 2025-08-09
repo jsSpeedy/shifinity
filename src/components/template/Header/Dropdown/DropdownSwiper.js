@@ -1,11 +1,11 @@
-// src/components/Header/DropdownMenu/RightMenu.js
+// src/components/template/Header/Dropdown/DropdownSwiper.js
 "use client";
 import styled from "styled-components";
-import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Play } from "lucide-react";
+import { getImageUrl } from "@/lib/api/ImagesApi";
 
 const DropdownFlex = styled.div`
   width: 100%;
@@ -16,14 +16,15 @@ const Card = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  min-width: 300px;
+  gap: 8px;
   max-width: 300px;
+  width: 100%;
   opacity: 0;
   transform: translateY(10px);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.75rem;
   border-radius: 1rem;
+  cursor: pointer;
   animation: ${({ $isOpen, $index }) =>
     $isOpen ? `fadeInUp 1s ease forwards ${$index * 0.1 + 0.3}s` : "none"};
 
@@ -37,7 +38,7 @@ const Card = styled.div`
 const Fragman = styled.div`
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  max-height: 170px;
 `;
 
 const StyledPlay = styled(Play)`
@@ -54,18 +55,16 @@ const StyledPlay = styled(Play)`
   transition: transform 0.3s ease;
 `;
 
-const Title = styled.h3`
+const Title = styled.h4`
   color: ${({ theme }) => theme.white};
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 `;
 
-const Tag = styled.span`
-  color: ${({ theme }) => theme.white};
-  font-size: 0.75rem;
-  text-align: center;
-`;
-
-const RightMenu = ({ data, isOpen }) => {
+const DropdownSwiper = ({ isOpen, movies }) => {
   return (
     <DropdownFlex>
       <Swiper
@@ -74,24 +73,24 @@ const RightMenu = ({ data, isOpen }) => {
         style={{ width: "100%" }}
         grabCursor={true}
       >
-        {data.right.map((item, i) => (
+        {movies.map((movie, i) => (
           <SwiperSlide key={i} style={{ width: "300px", flexShrink: 0 }}>
-            <Link href={item.href}>
-              <Card $isOpen={isOpen} $index={i}>
-                <Fragman>
-                  <Image
-                    src={item.image}
-                    alt={item.label}
-                    width={270}
-                    height={174}
-                    style={{ objectFit: "cover", borderRadius: "1rem" }}
-                  />
-                  <StyledPlay size={64} />
-                </Fragman>
-                <Title>{item.label}</Title>
-                <Tag>{item.tag}</Tag>
-              </Card>
-            </Link>
+            <Card $isOpen={isOpen} $index={i}>
+              <Fragman>
+                <Image
+                  src={getImageUrl(
+                    movie.backdrop_path || movie.poster_path,
+                    "w500"
+                  )}
+                  alt={movie.title || movie.name}
+                  width={270}
+                  height={170}
+                  style={{ objectFit: "cover", borderRadius: "1rem" }}
+                />
+                <StyledPlay size={64} />
+              </Fragman>
+              <Title>{movie.title || movie.name}</Title>
+            </Card>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -99,4 +98,4 @@ const RightMenu = ({ data, isOpen }) => {
   );
 };
 
-export default RightMenu;
+export default DropdownSwiper;

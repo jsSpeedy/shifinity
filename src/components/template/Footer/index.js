@@ -1,4 +1,4 @@
-//src/components/Footer/index.js
+//src/components/template/Footer/index.js
 "use client";
 import Link from "next/link";
 import styled from "styled-components";

@@ -1,12 +1,9 @@
-//src/components/Header/Menu.js
+//src/components/template/Header/NavMenu.js
 "use client";
-import Link from "next/link";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "./ThemeToggle";
-import Logo from "./Logo";
-import DropdownMenu from "./DropdownMenu";
-import LinkA from "./Link";
+import Dropdown from "./Dropdown";
+import NavLink from "./NavLink";
 import { useRef, useState } from "react";
 
 const NavItems = styled.nav`
@@ -37,17 +34,17 @@ const Menu = ({ navData }) => {
 
   return (
     <NavItems>
-      {navData.map((nav, index) => (
+      {navData.map(({ href, title, hasDropdown, dropdown }, index) => (
         <NavItem
           key={index}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
         >
-          <LinkA href={nav.href} $active={pathname.startsWith(nav.href)}>
-            {nav.label}
-          </LinkA>
-          {nav.hasDropdown && (
-            <DropdownMenu data={nav.dropdown} isOpen={hoveredIndex === index} />
+          <NavLink href={href} $active={pathname.startsWith(href)}>
+            {title}
+          </NavLink>
+          {hasDropdown && (
+            <Dropdown data={dropdown} isOpen={hoveredIndex === index} />
           )}
         </NavItem>
       ))}

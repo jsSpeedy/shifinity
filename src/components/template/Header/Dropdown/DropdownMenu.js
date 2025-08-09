@@ -1,7 +1,7 @@
-// src/components/Header/DropdownMenu/LeftMenu.js
+// src/components/template/Header/Dropdown/DropdownMenu.js
 "use client";
 import styled from "styled-components";
-import LinkA from "../Link";
+import NavLink from "../NavLink";
 
 const DropdownList = styled.div`
   display: flex;
@@ -16,6 +16,7 @@ const DropdownListItem = styled.div`
   transform: translateY(10px);
   animation: ${({ $isOpen, $index }) =>
     $isOpen ? `fadeInUp 0.4s ease forwards ${$index * 0.07}s` : "none"};
+  cursor: pointer;
 
   @keyframes fadeInUp {
     to {
@@ -25,18 +26,22 @@ const DropdownListItem = styled.div`
   }
 `;
 
-const LeftMenu = ({ data, isOpen }) => {
+const DropdownMenu = ({ data, isOpen, setActiveKey }) => {
   return (
     <DropdownList>
-      {data.left.map((item, i) => (
-        <LinkA key={i} href={item.href}>
-          <DropdownListItem $isOpen={isOpen} $index={i}>
-            {item.label}
+      {data.map(({ title, href, apiKey }, i) => (
+        <NavLink key={i} href={href}>
+          <DropdownListItem
+            $isOpen={isOpen}
+            $index={i}
+            onMouseEnter={() => setActiveKey(apiKey)}
+          >
+            {title}
           </DropdownListItem>
-        </LinkA>
+        </NavLink>
       ))}
     </DropdownList>
   );
 };
 
-export default LeftMenu;
+export default DropdownMenu;

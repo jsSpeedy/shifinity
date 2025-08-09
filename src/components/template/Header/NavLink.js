@@ -1,4 +1,4 @@
-//src/components/Header/Link.js
+//src/components/template/Header/NavLink.js
 "use client";
 import Link from "next/link";
 import styled from "styled-components";
@@ -20,7 +20,7 @@ const A = styled(Link)`
   }
 `;
 
-const LinkA = ({ href, big, $active, children }) => {
+const NavLink = ({ href, big, $active, children }) => {
   return (
     <A href={href} passHref $active={$active} big={big}>
       {children}
@@ -28,4 +28,4 @@ const LinkA = ({ href, big, $active, children }) => {
   );
 };
 
-export default LinkA;
+export default NavLink;

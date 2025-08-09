@@ -1,11 +1,11 @@
-//src/components/Header/index.js
+//src/components/template/Header/index.js
 "use client";
 import Link from "next/link";
 import styled from "styled-components";
-import ThemeToggle from "./ThemeToggle";
-import Logo from "./Logo";
-import Menu from "./Menu";
-import Container from "../Container";
+import ThemeToggle from "../../atoms/ThemeToggle";
+import Logo from "../../atoms/Logo";
+import NavMenu from "./NavMenu";
+import Container from "@/components/common/Container";
 
 const NavBar = styled.header`
   position: relative;
@@ -36,7 +36,7 @@ const Header = ({ navData }) => {
       <NavBar>
         <NavbarBg />
         <NavFlex>
-          <Menu navData={navData} />
+          <NavMenu navData={navData} />
           <Link href="/" passHref>
             <Logo />
           </Link>
