@@ -1,7 +1,7 @@
-//src/components/Header/ThemeToggle.js
+//src/components/atoms/ThemeToggle.js
 "use client";
 import styled from "styled-components";
-import { useTheme } from "@/styles/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 
 const StyledWrapper = styled.div`
   cursor: pointer;

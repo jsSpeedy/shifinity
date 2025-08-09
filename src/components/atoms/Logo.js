@@ -1,4 +1,4 @@
-//src/components/Header/Logo.js
+//src/components/atoms/Logo.js
 "use client";
 import styled from "styled-components";
 import { Montserrat_Alternates } from "next/font/google";
