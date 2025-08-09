@@ -1,8 +1,8 @@
-// src/styles/ThemeContext.js
+// src/context/ThemeContext.js
 "use client";
+import { darkTheme, lightTheme } from "@/styles/theme";
 import { createContext, useContext, useState, useEffect } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./theme";
 
 const ThemeContext = createContext();
 
